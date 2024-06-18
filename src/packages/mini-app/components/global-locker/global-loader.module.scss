@@ -1,0 +1,52 @@
+@import "@styles/colors.scss";
+
+.global-locker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.3);
+
+  &__content {
+    width: 90px !important;
+    height: 90px !important;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__loader {
+    width: 50px !important;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: $coin_color;
+    --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+
+  &__text {
+    color: $text_color;
+    font-size: 14px;
+    margin-top: 0.125rem;
+  }
+}
+
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}

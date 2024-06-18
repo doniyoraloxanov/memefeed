@@ -1,0 +1,57 @@
+@import "@styles/colors.scss";
+
+.slider {
+  margin-top: 20px;
+  padding: 10px 10px 20px;
+  background: $tertiary_bg_color;
+  box-shadow: $box_shadow;
+  backdrop-filter: blur(2.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+
+  &__title {
+    color: $link_color;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+}
+
+.ads {
+  padding: 10px 0;
+
+  &__card {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: $box_shadow;
+    background: $bg_color;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__icon {
+    width: 50px !important;
+    height: 50px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    grid-column-start: 2;
+    grid-column-end: 6;
+  }
+
+  &__link {
+    margin-top: 7px;
+    text-transform: uppercase;
+    color: $link_color;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,72 @@
+@import "../../styles/colors.scss";
+
+.share {
+  width: 100%;
+  padding: 10px;
+  background-color: $bg_color;
+  box-shadow: 0 0 10px 0 $box_shadow;
+
+  padding-bottom: 2rem;
+  border-radius: 12px;
+
+  &__container {
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    animation: showUp 0.3s ease;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    padding: 0.25rem;
+    border-radius: 12px;
+  }
+
+  &__link {
+    text-align: center;
+  }
+
+  &__icon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  &__close-icon {
+    path {
+      fill: $button_color !important;
+      color: white !important;
+    }
+  }
+}
+
+.hidden {
+  position: fixed;
+  bottom: -100%;
+  transition: all 0.5s ease;
+}
+
+@keyframes showUp {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}

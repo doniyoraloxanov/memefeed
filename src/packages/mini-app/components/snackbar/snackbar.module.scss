@@ -1,0 +1,67 @@
+@import "@styles/colors.scss";
+
+.snackbar {
+  background-color: $success_color;
+  color: $text_color;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: 1000;
+  text-align: center;
+  animation: slideInFromTop 0.3s ease-in-out 2.7s forwards;
+  border-radius: 14px !important;
+  width: calc(100% - 10px);
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &__container {
+    background-color: $success_color;
+    padding-left: 6px;
+  }
+
+  &__card {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: $secondary_bg_color;
+    box-shadow: $box_shadow;
+    cursor: pointer;
+    padding: 10px 24px;
+
+    &__icon {
+      width: 10px !important;
+      height: 10px !important;
+      fill: $text_color !important;
+
+      &--success {
+        fill: $success_color !important;
+        color: $success_color !important;
+      }
+
+      &--error {
+        fill: $destructive_text_color !important;
+        color: $destructive_text_color !important;
+      }
+
+      &--info {
+        fill: $accent_text_color !important;
+        color: $accent_text_color !important;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 0.9rem !important;
+  }
+
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%) translateX(-50%);
+    }
+    100% {
+      transform: translateY(0) translateX(-50%);
+    }
+  }
+}

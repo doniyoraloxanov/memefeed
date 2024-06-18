@@ -1,0 +1,21 @@
+@import "@styles/colors.scss";
+
+.selector {
+  padding: 0.5rem;
+  margin-top: 0.75rem;
+  background-color: $secondary_bg_color !important;
+  box-sizing: border-box;
+
+  &__item {
+    box-sizing: border-box;
+    border: 2px solid transparent;
+
+    &--selected {
+      box-sizing: border-box;
+      border: 2px solid $coin_color;
+    }
+
+    border-radius: $border_radius;
+    transition: all 0.1s ease;
+  }
+}
